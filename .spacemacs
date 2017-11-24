@@ -46,7 +46,7 @@ values."
      org
      (org :variables
           org-enable-reveal-js-support t)
-     ;; pdf-tools
+     pdf-tools
      elfeed
      (elfeed :variables rmh-elfeed-org-files (list "~/.emacs.d/private/elfeed.org")
      elfeed-enable-web-interface t)
