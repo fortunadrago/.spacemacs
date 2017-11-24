@@ -46,7 +46,7 @@ values."
      org
      (org :variables
           org-enable-reveal-js-support t)
-     pdf-tools
+     ;; pdf-tools
      elfeed
      (elfeed :variables rmh-elfeed-org-files (list "~/.emacs.d/private/elfeed.org")
      elfeed-enable-web-interface t)
@@ -54,6 +54,7 @@ values."
      (latex :variables latex-enable-auto-fill t)
      (latex :variables latex-enable-folding t)
      bibtex
+     twitter
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -328,7 +329,10 @@ you should place your code here."
   (with-eval-after-load 'org
     (setq org-ellipsis "⤵")
     (require 'org-habit)
-    (setq org-habit-preceding-days 7
+    (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+    (setq org-mobile-inbox-for-pull "~/org/from-mobile.org")
+    (setq org-directory "~/org")
+    (setq org-habit-preceding-days 21
           org-habit-following-days 7
           org-habit-graph-column 80
           org-habit-show-habits-only-for-today t
@@ -356,6 +360,7 @@ you should place your code here."
   (setq org-ref-default-bibliography '("~/Papers/references.bib")
         org-ref-pdf-directory "~/Papers/"
         org-ref-bibliography-notes "~/Papers/notes.org"))
+  (setq twittering-icon-mode t)
   )
 ;;Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
